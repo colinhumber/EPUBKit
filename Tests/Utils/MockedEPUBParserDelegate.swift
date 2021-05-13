@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import EPUBKit
+import SBEPUBKit
 
 class MockedEmptyEPUBParserDelegate: EPUBParserDelegate {}
 
