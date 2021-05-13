@@ -100,12 +100,12 @@
 		4134180C20E7CA78003D101D /* EPUBSpineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419DC01320B9E6DF00D654B2 /* EPUBSpineItem.swift */; };
 		4134180D20E7CA78003D101D /* EPUBTableOfContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD367E1EEAF80A00C34105 /* EPUBTableOfContents.swift */; };
 		4134182C20E8066D003D101D /* EPUBKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134182B20E8066D003D101D /* EPUBKitTests.swift */; };
-		4134182E20E8066D003D101D /* EPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134177720E7C5DB003D101D /* EPUBKit.framework */; };
+		4134182E20E8066D003D101D /* SBEPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134177720E7C5DB003D101D /* SBEPUBKit.framework */; };
 		4134183420E80EC4003D101D /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134178320E7C984003D101D /* AEXML.framework */; };
 		4134183520E80EC4003D101D /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134178420E7C984003D101D /* Zip.framework */; };
 		4134183720E819CE003D101D /* Alices_Adventures_in_Wonderland.epub in Resources */ = {isa = PBXBuildFile; fileRef = 4134182320E8015E003D101D /* Alices_Adventures_in_Wonderland.epub */; };
-		4134184420E82130003D101D /* EPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134174F20E7C2B9003D101D /* EPUBKit.framework */; };
-		4134185320E82141003D101D /* EPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134176920E7C428003D101D /* EPUBKit.framework */; };
+		4134184420E82130003D101D /* SBEPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134174F20E7C2B9003D101D /* SBEPUBKit.framework */; };
+		4134185320E82141003D101D /* SBEPUBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134176920E7C428003D101D /* SBEPUBKit.framework */; };
 		41BD9D1320E913AD0025FB27 /* broken_toc_metamorphosis.epub in Resources */ = {isa = PBXBuildFile; fileRef = 41BD9D1220E913AD0025FB27 /* broken_toc_metamorphosis.epub */; };
 		41BD9D1420E913AD0025FB27 /* broken_toc_metamorphosis.epub in Resources */ = {isa = PBXBuildFile; fileRef = 41BD9D1220E913AD0025FB27 /* broken_toc_metamorphosis.epub */; };
 		41BD9D1520E913AD0025FB27 /* broken_toc_metamorphosis.epub in Resources */ = {isa = PBXBuildFile; fileRef = 41BD9D1220E913AD0025FB27 /* broken_toc_metamorphosis.epub */; };
@@ -155,9 +155,9 @@
 		4134172420E702A5003D101D /* EPUBSpineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBSpineParser.swift; sourceTree = "<group>"; };
 		4134172820E70915003D101D /* EPUBTableOfContentsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBTableOfContentsParser.swift; sourceTree = "<group>"; };
 		4134172B20E79C7F003D101D /* EPUBContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBContentService.swift; sourceTree = "<group>"; };
-		4134174F20E7C2B9003D101D /* EPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4134176920E7C428003D101D /* EPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4134177720E7C5DB003D101D /* EPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4134174F20E7C2B9003D101D /* SBEPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBEPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4134176920E7C428003D101D /* SBEPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBEPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4134177720E7C5DB003D101D /* SBEPUBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBEPUBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4134178320E7C984003D101D /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AEXML.framework; path = Carthage/Build/iOS/AEXML.framework; sourceTree = "<group>"; };
 		4134178420E7C984003D101D /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Carthage/Build/iOS/Zip.framework; sourceTree = "<group>"; };
 		4134178720E7C9A2003D101D /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Carthage/Build/tvOS/Zip.framework; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4134182E20E8066D003D101D /* EPUBKit.framework in Frameworks */,
+				4134182E20E8066D003D101D /* SBEPUBKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4134184420E82130003D101D /* EPUBKit.framework in Frameworks */,
+				4134184420E82130003D101D /* SBEPUBKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4134185320E82141003D101D /* EPUBKit.framework in Frameworks */,
+				4134185320E82141003D101D /* SBEPUBKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +326,9 @@
 		41689DD61EE997D1004D6003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4134174F20E7C2B9003D101D /* EPUBKit.framework */,
-				4134176920E7C428003D101D /* EPUBKit.framework */,
-				4134177720E7C5DB003D101D /* EPUBKit.framework */,
+				4134174F20E7C2B9003D101D /* SBEPUBKit.framework */,
+				4134176920E7C428003D101D /* SBEPUBKit.framework */,
+				4134177720E7C5DB003D101D /* SBEPUBKit.framework */,
 				4134182920E8066D003D101D /* EPUBKit-iOS Tests.xctest */,
 				4134183F20E8212F003D101D /* EPUBKit-tvOS Tests.xctest */,
 				4134184E20E82140003D101D /* EPUBKit-macOS Tests.xctest */,
@@ -433,7 +433,7 @@
 			);
 			name = "EPUBKit-tvOS";
 			productName = "EPUBKit tvOS";
-			productReference = 4134174F20E7C2B9003D101D /* EPUBKit.framework */;
+			productReference = 4134174F20E7C2B9003D101D /* SBEPUBKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4134176820E7C428003D101D /* EPUBKit-macOS */ = {
@@ -452,7 +452,7 @@
 			);
 			name = "EPUBKit-macOS";
 			productName = "EPUBKit macOS";
-			productReference = 4134176920E7C428003D101D /* EPUBKit.framework */;
+			productReference = 4134176920E7C428003D101D /* SBEPUBKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4134177620E7C5DB003D101D /* EPUBKit-iOS */ = {
@@ -471,7 +471,7 @@
 			);
 			name = "EPUBKit-iOS";
 			productName = "EPUBKit iOS";
-			productReference = 4134177720E7C5DB003D101D /* EPUBKit.framework */;
+			productReference = 4134177720E7C5DB003D101D /* SBEPUBKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4134182820E8066D003D101D /* EPUBKit-iOS Tests */ = {
@@ -926,7 +926,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-tvOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -965,7 +965,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-tvOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1001,7 +1001,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-macOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1041,7 +1041,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-macOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1073,7 +1073,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-iOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1112,7 +1112,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bobrowski.EPUBKit-iOS";
-				PRODUCT_NAME = EPUBKit;
+				PRODUCT_NAME = SBEPUBKit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
