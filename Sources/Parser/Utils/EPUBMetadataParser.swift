@@ -40,9 +40,16 @@ class EPUBMetadataParserImplementation: EPUBMetadataParser {
         metadata.subject = xmlElement["dc:subject"].value
         metadata.title = xmlElement["dc:title"].value
         metadata.type = xmlElement["dc:type"].value
+
+        if let propertyElements = xmlElement["meta"].all?.filter({ $0.attributes["property"] != nil }) {
+            let properties = zip(propertyElements.compactMap { $0.attributes["property"] }, propertyElements.compactMap { $0.value })
+            metadata.properties = Dictionary(properties, uniquingKeysWith: { (first, last) in last })
+        }
+
         xmlElement["meta"].all?
             .filter { $0.attributes["name"] == "cover" }
             .forEach { metadata.coverId = $0.attributes["content"] }
+
         return metadata
     }
 

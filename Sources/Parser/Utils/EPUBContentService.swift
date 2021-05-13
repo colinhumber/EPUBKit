@@ -14,6 +14,7 @@ protocol EPUBContentService {
     var spine: AEXMLElement { get }
     var metadata: AEXMLElement { get }
     var manifest: AEXMLElement { get }
+    var drm: AEXMLElement? { get }
     init(_ url: URL) throws
     func tableOfContents(_ fileName: String) throws -> AEXMLElement
 }
@@ -27,10 +28,17 @@ class EPUBContentServiceImplementation: EPUBContentService {
     var spine: AEXMLElement { content.root["spine"] }
     var metadata: AEXMLElement { content.root["metadata"] }
     var manifest: AEXMLElement { content.root["manifest"] }
+    var drm: AEXMLElement?
 
     required init(_ url: URL) throws {
         let path = try EPUBContentServiceImplementation.getContentPath(from: url)
         contentDirectory = path.deletingLastPathComponent()
+
+        if let drmPath = EPUBContentServiceImplementation.getDRMPath(from: url) {
+            let drmData = try Data(contentsOf: drmPath)
+            drm = try AEXMLDocument(xml: drmData).root
+        }
+
         let data = try Data(contentsOf: path)
         content = try AEXMLDocument(xml: data)
     }
@@ -57,4 +65,13 @@ extension EPUBContentServiceImplementation {
         return url.appendingPathComponent(content)
     }
 
+    static private func getDRMPath(from url: URL) -> URL? {
+        let sinfUrl = url.appendingPathComponent("META-INF/sinf.xml")
+
+        guard FileManager.default.fileExists(atPath: sinfUrl.path) else {
+            return nil
+        }
+
+        return sinfUrl
+    }
 }

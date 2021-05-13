@@ -25,4 +25,5 @@ public struct EPUBMetadata {
     public var title: String?
     public var type: String?
     public var coverId: String?
+    public var properties: [String: String] = [:]
 }

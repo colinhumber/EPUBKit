@@ -16,6 +16,7 @@ public protocol EPUBParserDelegate: AnyObject {
     func parser(_ parser: EPUBParser, didFinishParsing manifest: EPUBManifest)
     func parser(_ parser: EPUBParser, didFinishParsing spine: EPUBSpine)
     func parser(_ parser: EPUBParser, didFinishParsing tableOfContents: EPUBTableOfContents)
+    func parser(_ parser: EPUBParser, didFinishParsing isEncrypted: Bool)
     func parser(_ parser: EPUBParser, didFinishParsingDocumentAt path: URL)
     func parser(_ parser: EPUBParser, didFailParsingDocumentAt path: URL, with error: Error)
 }
@@ -28,6 +29,7 @@ public extension EPUBParserDelegate {
     func parser(_ parser: EPUBParser, didFinishParsing manifest: EPUBManifest) {}
     func parser(_ parser: EPUBParser, didFinishParsing spine: EPUBSpine) {}
     func parser(_ parser: EPUBParser, didFinishParsing tableOfContents: EPUBTableOfContents) {}
+    func parser(_ parser: EPUBParser, didFinishParsing isEncrypted: Bool) {}
     func parser(_ parser: EPUBParser, didFinishParsingDocumentAt path: URL) {}
     func parser(_ parser: EPUBParser, didFailParsingDocumentAt path: URL, with error: Error) {}
 }

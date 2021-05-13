@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = 'EPUBKit'
+  s.name         = 'SBEPUBKit'
   s.version      = '0.3.1'
   s.summary      = '📚 A simple swift library for parsing EPUB documents.'
   s.description  = <<-DESC

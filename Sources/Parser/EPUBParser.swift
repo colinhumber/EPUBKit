@@ -36,6 +36,8 @@ public final class EPUBParser: EPUBParserProtocol {
         var manifest: EPUBManifest
         var spine: EPUBSpine
         var tableOfContents: EPUBTableOfContents
+        var isEncrypted = false
+
         delegate?.parser(self, didBeginParsingDocumentAt: path)
         do {
             var isDirectory: ObjCBool = false
@@ -48,7 +50,7 @@ public final class EPUBParser: EPUBParserProtocol {
             contentDirectory = contentService.contentDirectory
             delegate?.parser(self, didLocateContentAt: contentDirectory)
 
-            spine =  getSpine(from: contentService.spine)
+            spine = getSpine(from: contentService.spine)
             delegate?.parser(self, didFinishParsing: spine)
 
             metadata = getMetadata(from: contentService.metadata)
@@ -64,14 +66,21 @@ public final class EPUBParser: EPUBParserProtocol {
 
             tableOfContents = getTableOfContents(from: tableOfContentsElement)
             delegate?.parser(self, didFinishParsing: tableOfContents)
+
+            isEncrypted = getIsEncrypted(from: contentService.drm)
+            delegate?.parser(self, didFinishParsing: isEncrypted)
         } catch let error {
             delegate?.parser(self, didFailParsingDocumentAt: path, with: error)
             throw error
         }
         delegate?.parser(self, didFinishParsingDocumentAt: path)
-        return EPUBDocument(directory: directory, contentDirectory: contentDirectory,
-                            metadata: metadata, manifest: manifest,
-                            spine: spine, tableOfContents: tableOfContents)
+        return EPUBDocument(directory: directory,
+                            contentDirectory: contentDirectory,
+                            metadata: metadata,
+                            manifest: manifest,
+                            spine: spine,
+                            tableOfContents: tableOfContents,
+                            isEncrypted: isEncrypted)
     }
 
 }
@@ -98,4 +107,9 @@ extension EPUBParser: EPUBParsable {
         tableOfContentsParser.parse(xmlElement)
     }
 
+    public func getIsEncrypted(from xmlElement: XMLElement?) -> Bool {
+        guard let drm = xmlElement else { return false }
+
+        return !drm.children.filter { $0.all(containingAttributeKeys: ["fairplay:sinf"]) != nil }.isEmpty
+    }
 }

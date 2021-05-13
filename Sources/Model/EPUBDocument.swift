@@ -16,19 +16,22 @@ public struct EPUBDocument {
     public let manifest: EPUBManifest
     public let spine: EPUBSpine
     public let tableOfContents: EPUBTableOfContents
+    public let isEncrypted: Bool
 
     init (directory: URL,
           contentDirectory: URL,
           metadata: EPUBMetadata,
           manifest: EPUBManifest,
           spine: EPUBSpine,
-          tableOfContents: EPUBTableOfContents) {
+          tableOfContents: EPUBTableOfContents,
+          isEncrypted: Bool = false) {
         self.directory = directory
         self.contentDirectory = contentDirectory
         self.metadata = metadata
         self.manifest = manifest
         self.spine = spine
         self.tableOfContents = tableOfContents
+        self.isEncrypted = isEncrypted
     }
 
     public init?(url: URL) {
