@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol EPUBParserProtocol where Self: EPUBParsable {
+public protocol EPUBParserProtocol {
     var delegate: EPUBParserDelegate? { get set }
     func parse(documentAt path: URL) throws -> EPUBDocument
 }
