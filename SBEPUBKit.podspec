@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author             = { 'witekbobrowski' => 'witek@bobrowski.com.pl' }
   s.social_media_url   = 'https://github.com/witekbobrowski'
   s.swift_version = '5.4'
-  s.source       = { :git => 'https://github.com/showbie/EPUBKit.git', :tag => '0.3.2' }
+  s.source       = { :git => 'https://github.com/showbie/EPUBKit.git', :tag => s.version.to_s }
   s.source_files = [
       'Sources/*.{h,swift}',
       'Sources/**/*.swift',
